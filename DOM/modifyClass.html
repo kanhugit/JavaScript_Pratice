@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="oldclass" id="para1">Hii Good Morning ! Css Class</p>
+    <h1 class="class1">modify css classes by usin classList property</h1>
+
+    <script>
+        //className property
+        const element = document.getElementById('para1');
+        // element.className = "newclass";  // Sets the class to "newclass" 
+        element.className = "newClass anotherClass ";  // Sets classes(newClass anotherClass), replacing any existing classes(oldclass)
+        element.className = " oldclass  newClass anotherClass anotherOne ";
+        element.className += " additionalClass";  // Adds an additional class
+        console.log(element.className);
+
+        //classList Property
+        let element1 = document.getElementsByTagName('h1')[0]
+        element1.classList.add('class2') //class1 ,class2
+        element1.classList.add('class3', 'class4')//class1 class2 class3 class4
+        element1.classList.remove('class4') //class1 class2 class3
+        element1.classList.remove('class3', 'class2') //class1 
+
+        element1.classList.toggle('class3') //class1 class3
+        element1.classList.toggle('class4')//class1 class3 class4
+        element1.classList.toggle('class1')//class3 class4
+        element1.classList.toggle('class5',false)// class3 class4 
+        element1.classList.toggle('class5',true)// class3 class4 class5
+
+
+        element1.classList.replace('class3','class2')//class2 class4 class5
+        element1.classList.replace('class4','class3')//class2 class3 class5
+
+        console.log(element1.classList.contains('class1')); //false
+        console.log(element1.classList.contains('class5'));//true
+
+        // console.log(element1.classList.replace('class2', 'class5'));//true
+        // console.log(element1.classList.toggle('class2'));//true
+        // console.log(element1.classList.add('class10'));//undefined
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

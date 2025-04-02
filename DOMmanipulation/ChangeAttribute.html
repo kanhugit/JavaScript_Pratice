@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="https://cdn.pixabay.com/photo/2017/07/13/23/11/cinema-2502213_1280.jpg" alt="Error" id="myImage1"
+        height="200px" width="200px">
+
+    <img src="https://cdn.pixabay.com/photo/2016/09/22/13/51/bollywood-1687410_1280.jpg" alt="Error2" id="myImage2"
+        height="200px" width="200px">
+
+    <a href="https://cdn.pixabay.com/photo/2024/10/08/02/15/ai-generated-9104182_1280.jpg" id="myLink">Anchor</a>
+
+    <button disabled id="myButton">clickable</button>
+
+    <input type="text" placeholder="Enter Email" required id="myInput">
+
+    <script>
+        //directly use attributes
+        const img1 = document.getElementById("myImage1");
+        img1.src = "https://cdn.pixabay.com/photo/2020/05/25/15/34/film-5219099_1280.jpg";  // Sets the "src" attribute directly
+        img1.alt = "A different view";  // Sets the "alt" attribute directly
+
+        //setAttrubute()
+        const img2 = document.getElementById("myImage2");
+        img2.setAttribute("src", "https://cdn.pixabay.com/photo/2023/11/08/15/54/ai-generated-8375142_1280.jpg");  // Sets the image source
+        img2.setAttribute("alt", "A beautiful view");  // Sets the alt text for accessibility
+
+        //getAttribute()
+        const link = document.getElementById("myLink");
+        console.log(link.getAttribute("href"));  // Outputs the value of the "href" attribute
+        //removeAttribute()
+        const button = document.getElementById("myButton");
+        button.removeAttribute("disabled");  // Removes the "disabled" attribute, making the button clickable
+
+        //hasAttribute()
+        const input = document.getElementById("myInput");
+        if (input.hasAttribute("required")) {
+            console.log("This field is required.");
+        }
+
+
+    </script>
+</body>
+
+</html>

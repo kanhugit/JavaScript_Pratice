@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" method="">
+        <fieldset>
+            <!-- <p>*This is required</p> -->
+            <input type="text" placeholder="ENTER USER NAME" id="username" onfocus="changeBorder()"> <br><br>
+            <!-- <p>*This is required</p> -->
+            <input type="text" placeholder="ENTER PASSWORD" id="password" onclick="changeBorder()">
+            <br><br>
+
+            <button>SUBMIT</button>
+        </fieldset>
+
+    </form>
+
+    <script>
+        //changes input fields border color
+
+        function changeBorder() {
+            let userNameInputfield = document.getElementById("username");
+            let passwordInputfield = document.getElementById("password");
+            userNameInputfield.style.borderColor = 'red';
+            passwordInputfield.style.borderColor = 'red';
+        }
+
+        // let para1 = document.getElementById("para1");
+        // let para2 = document.getElementById("para2");
+    </script>
+</body>
+
+</html>

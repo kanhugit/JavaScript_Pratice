@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p id="first">This is the first paragraph.</p>
+        <p id="second">This is the second paragraph.</p>
+      </div>
+
+      <script>
+        //select the parent element
+        let container=document.getElementById('container');
+
+        //create a new element paragraph
+        let newpara=document.createElement('p');
+        newpara.textContent='this the new paragraph';
+
+        //select the existing child(reference node) before which we want to insert newpara
+        let secpara=document.getElementById('second')
+        //insert newpara before the second paragraph within parent
+
+        container.insertBefore(newpara,secpara);
+        
+      </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content">
+        <p id="oldParagraph">This is the original paragraph.</p>
+    </div>
+
+    <div id="container">
+        <p id="textToReplace">This paragraph will be replaced with multiple items.</p>
+    </div>
+
+
+    <script>
+        // Select the element to be replaced
+        const oldParagraph = document.getElementById("oldParagraph");
+        // Create the new element
+        const newParagraph = document.createElement("p");
+        newParagraph.textContent = "This is the new paragraph.";
+        // Replace the old paragraph with the new paragraph
+        oldParagraph.replaceWith(newParagraph);
+
+
+
+
+        const textToReplace = document.getElementById("textToReplace");        // Select the element to be replaced
+        const newHeading = document.createElement("h2");// Create new elements
+        newHeading.textContent = "This is a heading";
+
+        const newSpan = document.createElement("span");
+        newSpan.textContent = "And this is a span.";
+
+        textToReplace.replaceWith(newHeading, newSpan, " Additional text content.");// Replace the paragraph with a heading, a span, and some text
+
+
+    </script>
+</body>
+
+</html>

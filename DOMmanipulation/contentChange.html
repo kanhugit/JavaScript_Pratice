@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content change </title>
+</head>
+
+<body>
+    <!-- <p id="example">This is visible text</p> -->
+    <!-- <span id="example2"><p>Hello, <strong>world</strong>!</p></span> -->
+
+
+    <div style="display:none">Hidden     text</div> 
+    <!-- Assuming there is an element   -->
+
+    <!-- <div id="example4">
+        Line 1
+
+        Line 2 with extra spaces
+    </div> -->
+
+
+
+    <script>
+        // const element = document.getElementById('example');
+        // console.log(element.innerText);  //op=This is visible text
+        // const element1 = document.getElementById('example');
+        // element.innerText = "New visible text";  // Updates/get/return  the text   o/p=New visible text
+        // element.innerText = "New visible text 222222222222      ######          aaaaaa";  
+
+
+
+        //   const element2 = document.getElementById('example2');
+        //   console.log(element2.textContent);  // Outputs: "Hello, world!"
+
+        //   element2.textContent = "HELLO Javascripts!"; //op=Hello Javascript
+
+
+          const hiddenText = document.querySelector('div');
+
+          console.log(hiddenText.textContent);    // Outputs: "Hidden text"
+          console.log(hiddenText.innerText);    // Outputs: "" (empty, as text is hidden)
+
+
+        // const element = document.getElementById('example4');
+        // console.log(element.textContent);  
+        // element.textContent = "hiii kanha"
+        // console.log(element.textContent = "hiii kanha");
+        // Outputs with all spaces and lines preserved
+
+
+
+
+    </script>
+</body>
+
+</html>

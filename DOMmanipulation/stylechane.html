@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="para1">PARAGRAPH1</p>
+
+
+    <script>
+        const element = document.getElementById('para1');
+        element.style.color = "red";  // Changes text color to red
+        element.style.backgroundColor = "yellow";  // Changes background color to yellow
+
+        element.style.width = "200px";
+        element.style.height = "100px";
+        element.style.border = "2px solid black";
+
+
+
+        element.style.cssText = " color:red;background-color:aqua;width:400px;height:400px;border:5px solid green ";
+
+        element.style.color = "";  // Removes the color style 
+
+
+    </script>
+</body>
+
+</html>

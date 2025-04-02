@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>getElementsByName Basic Example</title>
+</head>
+<body>
+
+  <h2>getElementsByName Basic Example</h2>
+  
+  <!-- Two input fields with the same name -->
+  <input type="text" name="username" placeholder="Enter first name">
+  <input type="text" name="username" placeholder="Enter last name">
+  
+  <script>
+    let inp=document.getElementsByName('username');
+    console.log(inp);//NodeList(2) [input, input]
+    console.log(inp[0]);//input
+    console.log(inp[1]);//input
+
+
+    // // Access all elements with name="username"
+    // const usernameInputs = document.getElementsByName("username");
+
+    // // Log each element's placeholder to the console
+    // console.log("Elements with name 'username':");
+    // usernameInputs.forEach(input => console.log(input.placeholder));
+  </script>
+
+</body>
+</html>

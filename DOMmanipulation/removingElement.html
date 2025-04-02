@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container1">
+        <p id="childElement1">This is a paragraph that will be removed.</p>
+        <p id="childElement2">This is a paragraph that will be removed.</p>
+    </div>
+
+    <div id="container2">
+        <p id="childElement3">This is a paragraph that will be removed.</p>
+        <p id="childElement4">This is a paragraph that will be removed.</p>
+
+        
+    </div>
+
+
+
+</body>
+<script>
+    // Select the parent and child elements
+    const container1 = document.getElementById("container1");
+    const childElement1 = document.getElementById("childElement1");
+    // Remove the child element
+    container1.removeChild(childElement1);
+    container1.removeChild(childElement2);
+
+    //remove( ) method
+    // Select the element to be removed
+    const childElement3 = document.getElementById("childElement3");
+    const childElement4 = document.getElementById("childElement3");
+
+    // Remove the element directly
+    childElement3.remove();
+    childElement4.remove();
+
+
+
+</script>
+
+</html>
