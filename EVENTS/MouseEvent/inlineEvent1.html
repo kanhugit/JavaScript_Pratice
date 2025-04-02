@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Button Counter</title>
+</head>
+
+<body>
+
+    <button onclick="countClicks()">Click Me</button>
+    <span id="clickCount">0</span>
+
+
+    <!-- =============================================== -->
+
+    <div id="colorBox"
+        style="width: 150px; height: 150px; background-color: lightgray; text-align: center; line-height: 150px;"
+        onmouseover="this.style.backgroundColor = 'yellow'" onmouseleave="this.style.backgroundColor = 'gray'"
+        onclick="this.style.backgroundColor = 'lightgreen'">
+        Hover or Click Me
+    </div>
+    <!-- ================================================== -->
+    <div id="textBox" ondblclick="toggleText()"
+        style="width: 150px; height: 50px; text-align: center; line-height: 50px;">
+        Hello
+    </div>
+    <!-- ========================= -->
+    <div id="coordBox" onmousemove="showCoordinates(event)"
+        style="width: 200px; height: 200px; background-color: lightyellow; text-align: center; line-height: 200px;">
+        Move Mouse Here
+    </div>
+    <p id="coordinates">X: 0, Y: 0</p>
+    <!-- ===================================== -->
+
+    <div id="rightClickBox" oncontextmenu="showAlert(event)"
+        style="width: 200px; height: 200px; background-color: lightcoral; text-align: center; line-height: 200px;">
+        Right-Click Here
+    </div>
+
+    <!-- =============================================== -->
+
+    <div id="enterLeaveBox" onmouseenter="incrementEnterCount()" onmouseleave="incrementLeaveCount()"
+        style="width: 200px; height: 200px; background-color: lightgreen; text-align: center; line-height: 200px;">
+        Hover Here
+    </div>
+    <p>Enter Count: <span id="enterCount">0</span></p>
+    <p>Leave Count: <span id="leaveCount">0</span></p>
+    <!-- ===================================================== -->
+
+
+    <button id="holdButton" onmousedown="changeText('Holding...')" onmouseup="changeText('Released!')">
+        Click and Hold
+    </button>
+    <!-- ================================================================= -->
+    <div id="hoverBox" onmouseover="showMessage()" onmouseout="hideMessage()"
+        style="width: 200px; height: 200px; background-color: lightblue; text-align: center; line-height: 200px;">
+        Hover Over Me
+    </div>
+    <p id="hiddenMessage" style="display: none;">This is the hidden message!</p>
+    <!-- =========================================================================== -->
+
+
+
+
+
+    <script>
+        let count = 0;
+        function countClicks() {
+            count++;
+            document.getElementById("clickCount").textContent = count;
+        }
+
+        // ========================================
+        function toggleText() {
+            const box = document.getElementById("textBox");
+            box.textContent = box.textContent === "Hello" ? "Goodbye" : "Hello";
+        }
+        //================================================
+        function showCoordinates(event) {
+            document.getElementById("coordinates").textContent = "X: " + event.clientX + ", Y: " + event.clientY;
+        }
+        //================================================
+        function showAlert(event) {
+            event.preventDefault();
+            alert("Right-click detected!");
+        }
+        // ==================================
+        let enterCount = 0;
+        let leaveCount = 0;
+
+        function incrementEnterCount() {
+            enterCount++;
+            document.getElementById("enterCount").textContent = enterCount;
+        }
+
+        function incrementLeaveCount() {
+            leaveCount++;
+            document.getElementById("leaveCount").textContent = leaveCount;
+        }
+        //=============================================
+        function changeText(text) {
+            document.getElementById("holdButton").textContent = text;
+        }
+        //=====================================================
+
+        function showMessage() {
+            document.getElementById("hiddenMessage").style.display = "block";
+        }
+
+        function hideMessage() {
+            document.getElementById("hiddenMessage").style.display = "none";
+        }
+        //=================================================
+    </script>
+
+</body>
+
+</html>

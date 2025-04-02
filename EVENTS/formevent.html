@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- <fieldset>
+        <legend> Registraion</legend> <br>
+        <form action="">
+            <label for="">User Name:</label>
+            <input type="text" name="uname" id="" placeholder="UserName*" required> <br><br>
+            <label for="psw">password:</label><i class="fa-solid fa-eye-slash eye"></i>
+            <input type="password" name="pname" id="psw" placeholder="password" required> <br> <br>
+
+            <input type="submit">
+
+        </form>
+
+    </fieldset> -->
+
+
+    <fieldset>
+        <legend> Registraion</legend> <br>
+        <form action="" method="post">
+            <label for="">User Name:</label>
+            <input type="text" name="uname" id="" placeholder="UserName*" required> <br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="enter password" required>
+            <button type="button" class="toggle-btn" onclick="togglePasswordVisibility()">
+                👁️
+            </button>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+</body>
+<script>
+    function togglePasswordVisibility() {
+        const passwordField = document.getElementById("password");
+        const toggleButton = document.querySelector(".toggle-btn");
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            toggleButton.textContent = "🙈"; // Change icon to "hide" version
+        } else {
+            passwordField.type = "password";
+            toggleButton.textContent = "👁️"; // Change icon to "show" version
+        }
+    }
+</script>
+
+</html>

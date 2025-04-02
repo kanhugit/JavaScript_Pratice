@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="toggleButton">Click Me</button>
+    <button id="removeButton">Remove Event Listener</button>
+
+    <script>
+        const toggleButton = document.getElementById("toggleButton");
+
+        
+        const removeButton = document.getElementById("removeButton");
+
+        // Define the event listener function
+        function showAlert() {
+            alert("Button was clicked!");
+        }
+
+        // Add the click event listener
+        toggleButton.addEventListener("click", showAlert);
+
+        // Remove the click event listener when removeButton is clicked
+        removeButton.addEventListener("click", function () {
+            toggleButton.removeEventListener("click", showAlert);
+            alert("Event listener removed!");
+        });
+
+       
+    </script>
+
+</body>
+
+</html>

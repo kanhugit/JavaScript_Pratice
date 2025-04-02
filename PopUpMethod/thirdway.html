@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- third way to create event -->
+    <!-- <button>click me</button> -->
+
+    <input type="text" id="myInput" placeholder="Type something">
+
+
+
+
+    <script>
+        // let btn = document.querySelector('button');
+        // console.log(btn);
+
+        // btn.onclick = () => {
+        //     console.log("button is clicked ");
+        // }
+
+        const input = document.getElementById("myInput");
+        input.onchange = function () {
+            alert("Input changed!");
+        };
+    </script>
+</body>
+
+</html>

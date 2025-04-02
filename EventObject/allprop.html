@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="outerDiv" style="padding: 20px; background-color: lightblue;">
+        Outer Div
+        <div id="innerDiv" style="padding: 20px; background-color: lightgreen;">
+            Inner Div
+            <button id="myButton" style="padding: 10px; background-color: lightcoral;">
+                Click Me
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const button = document.getElementById("myButton");
+
+        button.addEventListener("click", function (event) {
+            console.log("Event Type:", event.type);
+            console.log("Target Element:", event.target);
+            console.log("Current Target Element:", event.currentTarget);
+            console.log("Event Timestamp:", event.timeStamp);
+            console.log("Client X:", event.clientX);
+            console.log("Client Y:", event.clientY);
+            console.log("Screen X:", event.screenX);
+            console.log("Screen Y:", event.screenY);
+            console.log("Is Alt Key pressed?", event.altKey);
+            console.log("Is Ctrl Key pressed?", event.ctrlKey);
+            console.log("Is Shift Key pressed?", event.shiftKey);
+            console.log("Default prevented?", event.defaultPrevented);
+        });
+    </script>
+
+</body>
+
+</html>

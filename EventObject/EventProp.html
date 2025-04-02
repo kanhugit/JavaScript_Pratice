@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="paren">
+        <button id="btn">click</button>
+        <input type="text" placeholder="press key..">
+    </div>
+
+    <script>
+        btn.addEventListener("mouseover", function (event) {
+            console.log(event.type); // Logs "click"
+        });
+
+        btn.addEventListener("click", function (event) {
+            console.log(event.target); // Logs the element that was clicked
+        });
+
+        paren.addEventListener("click", function (event) {
+            console.log(event.currentTarget); // Logs the parent element
+        });
+
+        document.addEventListener("keydown", function (event) {
+            console.log(event.key); // Logs the key pressed
+        });
+
+        btn.addEventListener("click", function (event) {
+            console.log("Mouse X:", event.clientX, "Mouse Y:", event.clientY);
+        });
+
+
+        
+
+        document.addEventListener("keydown", function (event) {
+            if (event.ctrlKey && event.key === "s") {
+                event.preventDefault();
+                console.log("Save shortcut triggered!");
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <p>object is a real world entity which has its own states and behaviours <br>
+        In object we can store the data in key value pair <br>
+        1.Direct Literals <br>
+        var/let/const identifier ={
+        key 1:value 1,
+        key 2:value 2,
+        key 3:value 3, ......
+
+
+        }
+    </p>
+
+
+    <script>
+        // let car = {
+        //     color: "red",
+        //     price: "10cr",
+        //     brand: "Audi"
+        // };
+        // console.log(car);
+        // console.log(color); 
+        //1.by using direct literals
+        //how to access : by using 1)dot operator
+        // console.log(car.color);
+        // console.log(car.price);
+        // console.log(car.brand);
+
+        //2. subscript operator
+        // console.log(car["color"]);
+        // console.log(car["price"]);
+        // console.log(car["brand"]);
+        // console.log(car["milage"]);
+
+        //add keys
+        // car.milage = 20;
+        // car.tyer = "MRF";
+        // car.AC = "availabe"
+        // console.log(car);
+        //delete keys
+        // delete car.milage;
+        // console.log(car);
+        //Modify/Update keys
+        //delete objectName.keys
+        // car.color = "black"
+        // console.log(car);
+
+
+        //=====================================
+        // console.log("HUMAN AS OBJECT");
+
+        // let human = {
+        //     head: "To understand",
+        //     eyes: "To see",
+        //     ear: "To Listen"
+        // }
+        // let doctor = {
+        //     Injection: "For Treatment",
+        //     Thermometer: "To check temp",
+        //     Tecthoscope: "To check heartbeat"
+        // }
+        // let police = {
+        //     uniform: "To indentify the soiciety",
+        //     gun: "To fire criminals",
+        //     vehicles: "for transformation"
+        // }
+        // let softwareEnginner = {
+        //     laptop: "do coding",
+        //     skills: "to get job",
+        //     communication: "fluent"
+        // }
+        // let Teacher = {
+        //     school: "High school",
+        //     SubTaught: "English",
+        //     role: "Headmaster"
+        // }
+
+
+        //====================================
+        // console.log("pen object");
+
+        // let pen = {
+        //     color: "blue",
+        //     cost: 10,
+        //     brand: "Elkase",
+        //     description: () => {
+        //         console.log("arr funcnction executed");
+        //     }
+        // }
+        // console.log(pen);
+        // console.log(typeof pen);   //object
+        // console.log(typeof pen.cost); //number
+        // console.log(typeof pen.brand); //string
+        // console.log(typeof description); //function
+        // console.log(pen.description);
+
+        // console.log(pen.description()); //enire function
+
+        //=====================================================
+        // console.log("STUDENTS");
+
+        // let person = {
+        //     firstName: "kanha",
+        //     LastName: "Behera",
+        //     age: 24,
+        //     Students: {
+        //         Rollnum: {
+        //             rollno1: 100,
+        //             rollno2: 200
+        //         },
+        //         sub: {
+        //             sub1: "java",
+        //             sub2: "Javascript"
+        //         }
+        //     }
+        // }
+        // console.log(person);
+        // console.log(person.age);
+        // console.log(person.Students);
+        // console.log(person.Rollnum);
+        // console.log(person.Students.rollno2);
+        // console.log(person.Students.sub);
+        // console.log(person.Students.sub.sub1);
+
+
+        //2.by using  constructor function
+        // function pen(color,price){
+        //     this.pencolor=color;
+        //     this.penprice =price;
+        // }
+        // let pen1=new pen("red",100);
+        // console.log(pen1);
+
+
+        // let pen2=new pen("blue",200);
+        // console.log(pen2);
+
+
+        //3.by using inbulid Object()
+        // var obj1=new Object();
+        // console.log(obj1);
+        // obj1.color="orange";
+        // obj1.price=100;
+        // obj1.brand="Elcose"
+        // console.log(obj1);
+
+
+        //object method
+
+        let person1 = {
+            name: "kanha",
+            age: 23,
+            id: 100
+        }
+        // let keys=Object.keys(person1);
+        // console.log(keys);
+        // console.log(Object.keys(person1));
+
+        // let values=Object.values(person1);
+        // console.log(values);
+
+
+        Object.seal(person1);
+        person1.salary = 10000;
+        // console.log(person1);
+
+        person1.id = 102;
+        console.log(person1);
+
+        // delete person1.id
+        // console.log(person1);
+        // console.log(Object.isSealed(person1));
+        // Object.freeze(person1);
+        // person1.salary=20000;
+        // console.log(person1);
+        // person1.name="sahoo babu"
+        // console.log(person1 );
+
+        // let entries = [['name', 'John'], ['age', 30]];
+        // // let person = Object.fromEntries(entries);
+        // // console.log(person); // { name: "John", age: 30 }
+        // console.log(entries);
+
+
+        // let map = new Map([["name", "John"], ['age', 30]]);
+        // // let person = Object.fromEntries(map);
+        // // console.log(person); // { name: "John", age: 30 }
+        // console.log(map);
+
+
+
+        // let person = { name: "John" };
+        // let details = { age: 30, city: "New York" };
+        // let mergedPerson = Object.assign(person, details);
+        // console.log(mergedPerson); // { name: "John", age: 30, city: "New York" }
+
+
+        // let person = { name: "John", age: 30 };
+        // // let clone = { ...person };
+        // // console.log(clone); // { name: "John", age: 30 }
+        // console.log( {...person});
+
+
+        // let emp = '{"name": "mithun", "age": 50}';
+        // // let person = JSON.parse(json);
+        // // console.log(person); // { name: "John", age: 30 }
+        // console.log(JSON.parse(emp));
+
+        // console.log(Object.is(NaN, NaN)); // true
+        // console.log(Object.is(+0, -0)); // false
+        // console.log(Object.is("kanha","kanha"));//true
+
+        let obj = { name: "John" };
+        Object.preventExtensions(obj);
+
+        obj.age = 30; // This will not be added
+        console.log(obj.age); // undefined
+
+        obj.name = "kanha";
+        console.log(obj);
+
+        delete obj.name; // Deleting properties still works
+        console.log(obj); // undefined
+
+
+
+        // let personProto = { greet() { console.log("Hello"); } };
+        // let person = Object.create(personProto);
+        // person.name = "John";
+        // person.greet(); // "Hello"
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

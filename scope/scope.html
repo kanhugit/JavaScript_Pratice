@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope of variable</title>
+</head>
+<body>
+    <h1>scope of variable</h1>
+    <script>
+
+        console.log("exp 1");
+        // console.log(a,b,c);
+        // var a=10;
+        // let b=20;
+        // const c=30;
+        // console.log(a,b,c);
+        // {
+            // var a=100;
+            // b=200;
+            // const c=300;
+            // console.log(a,b,c); //100,200,300
+
+        // }
+        // console.log(a,b,c); //100,200,30
+
+
+        console.log("exp 2");
+        // var a=5;
+        // let b=a+5;
+        // console.log(a+b);
+        // {
+        //     var a=50;
+        //     a+=5;
+        //     b++;
+        //     console.log(a,b); //55,11
+        // }
+        // console.log(a,b,c);
+
+
+        console.log("exp 3");
+
+        // const c=20;
+        // console.log(a,c);
+        // var a=7;
+        // let b=14;
+        // console.log(a,b,c); //7,14,20
+        // {
+        //     const c=a%b;
+        //     console.log(a,b,c); //7,14,7
+        //     // c++;
+        // }
+        // console.log(a,b,c); //7,14,20
+
+
+        console.log("exp 4");
+        // console.log(a);
+        // var a;
+        // a=15;
+        // let b=25;
+        // // console.log(a,b,c);
+        // const c=35;
+        // a=c-b;
+        // console.log(c+10);
+        // {
+        //     b+=a;
+        //     a-=c;
+        //     console.log(a,b,c);//-25,35,35
+
+        // }
+        // console.log(a,b,c); //-25,35,35
+
+
+
+        console.log("exp 5");
+
+        var a=40;
+        let b=50;
+        console.log(a,b);
+        b*=2;
+        a--;
+        // console.log(a,b,c);
+        {
+            let b=40;
+            const c=80;
+            console.log(a,b,c);//39,40,80
+            --a;
+        }
+        // console.log(a,b,c);
+
+
+        
+    </script>
+</body>
+</html>

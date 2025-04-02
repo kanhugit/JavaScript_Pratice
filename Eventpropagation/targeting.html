@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="outerDiv" style="padding: 20px; background-color: lightblue;">
+        Outer Div
+        <div id="innerDiv" style="padding: 20px; background-color: lightgreen;">
+            Inner Div
+            <button id="myButton" style="padding: 10px; background-color: lightcoral;">
+                Click Me
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Adding an event listener only on the target element
+        document.getElementById("myButton").addEventListener("click", function (event) {
+            console.log("Button - Target Phase");
+        });
+    </script>
+
+</body>
+
+</html>

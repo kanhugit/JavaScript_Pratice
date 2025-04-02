@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Named Function </title>
+</head>
+<body>
+<script>
+
+    console.log("EXAMPLE 1");
+
+    function demo(){
+        console.log("heloo world");
+    }
+    demo();
+    demo();
+
+
+    console.log("EXAMPLE 2");
+    function add(a,b){
+   console.log(a,b);
+   console.log(a+b);
+    }
+    add(10,20);
+    add("hello","world");
+    add(true,false);
+    add(10,"hello");   //parameters can hold any type of data
+
+    // console.log(a);
+    // console.log(b);
+
+    add(10,20,30,40,50);  //extra arguments no err-rest arg igonerd
+    add();           //no arg parameter will store undefined
+
+
+
+    console.log("EXAMPLE 3");
+    function add1(a,b,c){
+        return (a+b+c);
+    }
+    let rv1=add1(1,2,3)//6
+    console.log(rv1);
+    let rev2=add1(10,20,30);//60
+    console.log(rev2);
+
+
+    //secenarios
+    //function with parameters and with return value
+    //===============================================
+    console.log("secenario 1:function with parameters and with return value");
+
+    function area(l,b){
+            return ("area of rectangle is :"+l*b);
+    }
+    let re_val=area(2,3);
+    console.log(re_val);
+    let re_val2=area(4,3)
+    console.log(re_val2);
+
+
+    
+
+
+    //function with parameters and without return type
+    console.log("secenario 2:function with parameters and without return value");
+    //==========================================================================
+
+    function Square_Perimeter(side){
+            console.log("Perimeters of Rectangle is :"+4*side);
+    }
+    Square_Perimeter(25);
+    Square_Perimeter(15);
+    Square_Perimeter(18);
+
+
+
+    //function without parameter and with return type
+    console.log("secenario 3:function without parameter and with return value");
+    //===============================================
+    let num=8;
+function even(){
+    return num%2===0;
+}
+let res=even();
+console.log(res);
+
+// =======================================================
+function getGreeting() {
+    return "Hello, welcome to JavaScript!";
+}
+
+let message = getGreeting();
+console.log(message);  // Output: "Hello, welcome to JavaScript!"
+//=========================================================
+
+    //function without  parameters and without return s
+    console.log("secenario 4:function without parameters and without return value");
+
+    //=================================================
+    function Myfunction(){
+        console.log("BOSS YOU ARE SLEEPING....");
+    }
+    Myfunction();
+</script>
+</body>
+</html>

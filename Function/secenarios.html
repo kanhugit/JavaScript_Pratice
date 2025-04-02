@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senarios of function</title>
+</head>
+
+<body>
+    <script>
+        //function with parameters and return type 
+        console.log("secenario 1");
+
+        function fun1(a, b) {
+            let sum = a + b;
+            return sum;
+        }
+        let x = fun1(10, 20)
+        console.log(x);
+        console.log(fun1(1, 3));
+
+        //function with parameters and without return type
+
+        console.log("secenario 2");
+
+        function fullname(firstname, lastname) {
+            if (typeof firstname === "string" && typeof lastname === "string") {
+                console.log("fullname is " + (firstname + lastname));
+            } else {
+                console.log("incorrect data ");
+            }
+        }
+        fullname("kanhu ", "swati");
+        fullname(10, 20);
+
+        //function without parameters and with return types
+        console.log("secenario 3");
+
+        //    function fun3(){
+        //     console.log("function 3 executed ");
+        //     return 100;
+        //    }
+        //    let x=fun3;
+        //    console.log(x);//100
+        //    console.log(fun3());
+
+        //function without parameters and without return types
+        //    console.log("secenario 4");
+
+        //    function fun4(){
+        //     console.log("heloo");
+        //    }
+        //    console.log(fun4());
+
+
+        //function with default value 
+        //    function add(){
+        //     console.log(c+d);
+        //    }
+        //    add(1,2);
+        //    add();
+
+
+
+        function Order(noofitems) {
+
+            if (noofitems <= 5) {
+                console.log("Order is not acceptable ");
+            } else {
+                console.log("Order is placed,Total cost is " + noofitems * 999);
+            }
+        }
+        Order(3);
+
+        //==============================
+        function Purchase(noofitems, costofeachitem) {
+            if (noofitems <= 5 && costofeachitem >= 1000) {
+                console.log("");
+            } else {
+                console.log("");
+            }
+        }
+        Purchase(3, 500)
+
+        //===============================
+        function Grade(sub1, sub2, sub3) {
+            let total_sub = 0;
+            let total_fail = 0;
+            if (sub1 >= 40) {
+                console.log("Passsed in subject");
+            } else {
+                console.log("not passed in subject");
+            }
+
+        }
+
+        Grade(30, 40, 50);
+
+
+
+
+
+
+
+
+
+
+        //=========================================
+        console.log("exp1");
+        function EvenorOdd(num) {
+            if (num % 2 === 0&&num%7===0) {
+                console.log(num + " is even number and divisible by 7");
+            } else {
+                
+                console.log(num + "is odd number and not divisible by 7 ");
+            }
+        }
+        EvenorOdd(13);
+        //========================================
+        console.log("exp2");
+
+        // function DivisibleBy7(num) {
+        //     if (num%7===0) {
+        //         console.log(num+"divisible by 7");
+        //     }else{
+        //         console.log(num+"not divisible by 7");
+        //     }
+        // }
+        // DivisibleBy7(49);
+
+        //======================================================
+
+        console.log('exp3');
+
+        function double(num){
+            console.log(num*num+" is double of "+num);
+        }
+        double(10);
+        //=================================================
+        console.log("exp 4");
+
+        function primeCheck(num){
+            if(num%2===1){
+                console.log("prime number");
+            }else{
+                console.log("not prime number");
+            }
+        }
+        primeCheck(3);
+        //================================================
+        // console.log("exp 5");
+        
+    </script>
+</body>
+
+</html>

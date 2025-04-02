@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution Context </title>
+</head>
+<body>
+    <script>
+
+        console.log("EXECUTION CONTEXT");
+
+        // console.log(a);
+        // var a=5;
+        // let b=7;
+        // const c=8;
+        // console.log(a,b,c);
+        // function demo(){
+        //     console.log(a);
+        //     var a=18;
+        //     let b=25;
+        //     console.log(a,b,c);
+        // }
+        // demo()
+        // console.log(a,b,c);
+
+        //========================================
+        function demo(){
+            // console.log(a,b);
+            var a=10;
+            let b=20;
+            console.log(a,b);
+        }
+        // console.log(a,b,c);
+        demo();
+        var a=8;
+        let b=7;
+        const c=85;
+        console.log(a,b,c);
+
+        //====================================
+
+        function outer(){
+            var a=10;
+            let b=20;
+            console.log(a,b);
+            function inner(){
+                const c=30;
+                console.log(a,b,c);
+            }
+            inner();
+
+        }
+        outer();
+        console.log(a,b,c);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> 1. How can you prevent a specific key from being typed in an input field? <br>
+        ANS=>You can use the event.preventDefault() method to block a specific key. For example, to prevent the "a" key
+        from
+        being typed in an input:
+    </p>
+
+    <input placeholder="press key 'a'" type="text" onkeydown="preventAKey(event)" />
+
+    <script>
+        function preventAKey(event) {
+            if (event.key === "a") {
+                event.preventDefault();
+            }
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback function</title>
+</head>
+<body>
+    <script>
+console.log("callback function example");
+
+    let add=(a,b)=>{
+        console.log(a+b);
+    }
+    let sub=(a,b)=>{
+        console.log(a-b);
+    }
+    let mul=(a,b)=>{
+        console.log(a*b);
+    }
+    function perform(num1,num2,Callback){
+        Callback(num1,num2);
+    }
+    perform(10,20,add);
+    perform(10,20,sub);
+    perform(10,20,mul);
+
+
+
+    // ===================================================
+    console.log("string");
+
+function processString(str, callback) {
+    return callback(str);
+}
+
+function toUpperCase(str) {
+    return str.toUpperCase();
+}
+
+function toLowerCase(str) {
+    return str.toLowerCase();
+}
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+function countCharacters(str) {
+    return str.length;
+}
+
+let inputString = "Hello World";
+
+console.log("Uppercase: " + processString(inputString, toUpperCase));  
+console.log("Lowercase: " + processString(inputString, toLowerCase));  
+console.log("Reversed: " + processString(inputString, reverseString)); 
+console.log("Character Count: " + processString(inputString, countCharacters));
+
+</script>
+</body>
+</html>

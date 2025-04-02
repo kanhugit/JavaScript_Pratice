@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouser</title>
+</head>
+
+<body>
+    <script>
+        //here num varible has clouser scope ,so we can access it inside the inner function
+        function outer(a){
+            let num=50;
+            return ()=>{
+                console.log("inner function get executed ");
+                console.log(num);
+                console.log(a);
+            }
+        }
+        let x=outer(10);
+        console.log(x);
+        x();
+
+
+
+        // console.log(typeof x); // ?
+        // let x = 10;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>Name:</label>
+        <input type="text" required><br><br>
+    
+        <label >Email:</label>
+        <input type="email"  required><br><br>
+    
+        <label >Designation:</label>
+        <input type="text"  required><br><br>
+    
+        <button type="button" id="btn1">Submit</button>
+      </form>
+
+      <table border="3px" cellpadding="10px" cellspacing="20px">
+        <thead>
+          <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Designation</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+
+
+    <script>
+        let tbody = document.getElementsByTagName('tbody')[0]
+        let btn1 = document.getElementById("btn1");
+        let num = 0;
+
+        btn1.addEventListener("click", (e) => {
+            e.preventDefault();
+            let inputs = document.getElementsByTagName("input")
+            tbody.innerHTML += `
+                <tr>
+                    <td>${num+=1}</td>
+                    <td>${inputs[0].value}</td>
+                    <td>${inputs[1].value}</td>
+                    <td>${inputs[2].value}</td>
+                </tr>
+            `
+            inputs[0].value=" "
+            inputs[1].value=" "
+            inputs[2].value=" "
+        })
+    </script>
+</body>
+
+</html>

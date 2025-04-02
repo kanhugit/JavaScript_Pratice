@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //simple if
+        // syntax:
+        // if(condition)
+
+        console.log("simple if");
+        let a=20;
+        if(a>10)
+            console.log("a is greater then 10.");
+
+        if(a<10){
+            console.log("a is less then 10");
+        }
+
+        //if-else
+
+        // Syntax
+        // if(condition){
+        //     condition is true this block will execute 
+        // }
+        // else{
+        //     condition is false means this block will execute
+        // }
+
+        console.log("if - else");
+
+        if(a>10){
+                console.log("a is greater then 10");
+        }
+        else{
+            console.log("a is less then 10");
+        }
+
+        //even or odd
+
+        a=11;
+        if(a%2==0){
+            console.log(a+" is even number");
+        }
+        else{
+            console.log(a+" is odd number");
+        }
+
+        //nested-if
+
+        console.log("nested if");
+
+        // if(condition){
+        //     if outer if condition is true this block will execute
+        //     if(condition){
+        //         if inner condition is ture this block will execute
+        //     }
+        //     else{
+        //         if inner condition  is false this block will execute
+        //     }
+        // }
+        // else{
+        //     if outer if condition is false this block will execute
+        //     if(condition){
+        //         if inner condition is ture this block will execute
+        //     }
+        //     else{
+        //         if inner condition  is false this block will execute
+        //     }
+
+        // }
+
+        //check weather given number is even or odd and positive and negitive
+
+        if(a>0){
+            console.log(a+ " a is positive number ");
+            if(a%2==0){
+                console.log(" and even number");
+            }
+            else{
+                console.log(" and odd number");
+            }
+        }
+        else{
+            console.log(a+" is a negitive number ");
+            if(a%2==0){
+                console.log(" and even number");
+            }
+            else{
+                console.log(" and odd number");
+            }
+        }
+
+        //else-if ladder
+        console.log("else if ladder");
+
+        // Syntax
+        // if(condition){
+        //     condition is true this block will execute 
+        //     after execution it will get out of the if block
+
+        // }
+        // else if(condition){
+        //     condition is true this block will execute 
+        //     after execution it will get out of the if block
+        // }
+        // else if(condition){
+        //     condition is true this block will execute 
+        //     after execution it will get out of the if block
+        // }
+        // else if(condition){
+        //     condition is true this block will execute 
+        //     after execution it will get out of the if block
+        // }
+        // else{
+        //     if all the conditions are false then else block will executed
+        // }
+        //grades of a student
+        a=43;
+        if(a>=90){
+            console.log("O grade");
+        }
+        else if(a<=89 && a>=80){
+            console.log("A+ Grade");
+        }
+        else if(a<=79 && a>=70){
+            console.log("A Grade");
+        }
+        else if(a<=69 && a>=60){
+            console.log("B+ Grade");
+        }
+        else if(a<=59 && a>=50){
+            console.log("B Grade");
+        }
+        else if(a<=49 && a>=40){
+            console.log("C Grade");
+        }
+        else{
+            console.log("fail");
+        }
+
+
+        //switch case
+        // syntax 
+        // switch(expression/value/varable){
+        //     case value : console.log("first output"); true
+        //     case value : console.log("first output"); true
+        //     case value : console.log("first output"); true
+        //     case value : console.log("first output"); true
+        //     case value : console.log("first output"); true
+        //     .
+        //     .
+        //     .
+        //     .
+        //     . 
+        //     defalut:
+        // }
+
+        //marriage age>21 job=true salary>100000 ,loc=hyd
+
+        let age=22;
+        let job=true;
+        let salary=200000;
+        let loc="hyd";
+        if(age<21){
+            console.log("age is not eligible");
+        }
+        else if(job==false){
+            console.log("un employeed");
+
+        }
+        else if(salary<100000){
+            console.log("salary is not good enough");
+        }
+        else if(loc!="hyd"){
+            console.log("location is not matched");
+        }
+        else{
+            console.log("you are perfect match");
+        }
+
+    
+        console.log("switch case");
+
+        let day ="friday";
+        switch(day){
+            case "Monday": console.log("Working day"); break;
+            case "Tuesday": console.log("Working day"); break;
+            case "Wednesday": console.log("working day"); break;
+            case "Thursday": console.log("Wroking day"); break;
+            case "Friday": console.log("Working day"); break;
+            case "Saturday": console.log("Weekend"); break;
+            case "Sunday": console.log("Funday"); break;
+            default : console.log("wrong input");
+        }
+        
+        // interview
+        let java=81;
+        let sql=89;
+        let web=92;
+        let attendance=95;
+        if(java>80 && sql>80 && web>80 && attendance>90)
+            console.log("u can attend the interview");
+        else
+            console.log("re mock");
+
+        //WAP ton know the student is passed in the exam or not
+        //maths=45,sci=40,tel=50,social=30   if(marks>35===pass) if(marks=<35==fail)
+        // add all the passed subject marks and failed subjects
+
+        let maths=45;
+        let sci=40;
+        let tel=50;
+        let social=20;
+        let pass_sum=0;
+        let fail_sum=0;
+        if(maths>35){
+            console.log("you are pass in maths");
+            pass_sum+=maths;
+        }
+        else{
+            console.log("you are fail in maths");
+            fail_sum+=maths;
+
+        }
+        if(sci>35){
+            console.log("you are pass in science");
+            pass_sum+=sci;
+        }
+        else{
+            console.log("you are fail in science");
+            fail_sum+=sci;
+        }
+        if(tel>35){
+            console.log("you are pass in telugu");
+            pass_sum+=tel;
+        }
+        else{
+            console.log("you are fail in telugu");
+            fail_sum+=tel;
+        }
+        if(social>35){
+            console.log("you are pass in social");
+            pass_sum+=social;
+        }
+        else{
+            console.log("you are fail in social");
+            fail_sum+=social;
+        }
+        console.log(pass_sum);
+        console.log(fail_sum);
+
+        //  WAP to check the given number is divisible by 3 & 8
+
+        let n=240;
+       
+        if(n%3==0 && n%8==0){
+            console.log(n+" is divisble by 3 & 8 ");
+        }
+        else{
+            // console.log(n+" is not divisble by 3 & 8");
+            if(n%3==0){
+            console.log(n+" is divisble by 3 not by 8");
+            }
+            else if(n%5==0){
+                console.log(n+" is divisble by 8 not by 3 ");
+            }
+        }
+        let num=372;
+       
+       if(num%4==0 && num%5==0){
+           console.log(num+" is divisble by 4 & 5 ");
+       }
+       else{
+        //    console.log(n+" is not divisble by 4 & 5");
+           if(num%4==0){
+           console.log(num+" is divisble by 4 not by 5");
+           }
+           else if(num%5==0){
+               console.log(num+" is divisble by 5 not by 4 ");
+           }
+       }
+
+       //write a program to print the datatype
+
+       let datatype=true;
+       console.log(typeof datatype);
+
+
+       console.log("for loop");
+       for(let i=100;i<=200;i+=2){
+        console.log(i);
+       }
+       console.log("while loop");
+       let i=100;
+       while(i<=200){
+        console.log(i);
+        i+=2;
+       }
+       console.log("do while loop");
+       let i2=100;
+       do{
+        console.log(i2);
+        i2+=2;
+
+       }while(i2<=200)
+
+       //wap to print odd numbers from 1 to 1000
+       for(let i=1;i<=1000;i+=2){
+        console.log(i);
+       }
+       //wap to print numbers from  300 to 500
+       for(let i=300;i<=500;i++){
+        console.log(i);
+       }
+       //wap to print numbers from 1000 to 1
+       for(let i=1000;i>=1;i--){
+        console.log(i);
+       }
+       //wap to print the numbers divible by 4 from 200 to 800
+       for(let i=200;i<=500;i+=4){
+        console.log(i);
+       }
+       //wap to check given number is between 200 to 500
+       let number=278;
+       if(number>=200 && number<=500){
+        console.log(number+" given number is between 200 and 500");
+       }
+       else{
+        console.log(number+" given number is not between 200 and 500");
+       }
+
+       //wap to print the digits in the given number
+    //    let digitofgivennumber=233;
+    //    console.log(digitofgivennumber);
+    //    let x=0;
+    //    console.log(typeof digitofgivennumber);
+    //    let y=0;
+    //    y=digitofgivennumber%10;
+    //    console.log(y);
+    //    digitofgivennumber=digitofgivennumber/10;
+    //    console.log(digitofgivennumber);
+    //    console.log(x);
+    //    while(digitofgivennumber>0){
+    //     x++;
+        // digitofgivennumber=digitofgivennumber/10;
+        // console.log(digitofgivennumber);
+        // digitofgivennumber=digitofgivennumber/10;
+        // console.log(digitofgivennumber);
+        
+        // digitofgivennumber=digitofgivennumber/10;
+        // console.log(digitofgivennumber);
+        // digitofgivennumber=digitofgivennumber/10;
+        // console.log(digitofgivennumber);
+    //    }
+    //    console.log(x);
+    </script>
+</body>
+</html>

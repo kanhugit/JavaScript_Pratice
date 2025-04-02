@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Scroll Event Example</title>
+  <style>
+    body {
+      height: 2000px; /* Make the page taller to allow scrolling */
+    }
+  </style>
+</head>
+<body onscroll="logScrollPosition()">
+
+  <h3>Window Scroll Example</h3>
+  <p>Scroll down the page and check the console for the scroll position.</p>
+
+  <script>
+    function logScrollPosition() {
+      console.log('Scroll position:', window.scrollY);
+    }
+  </script>
+
+</body>
+</html>

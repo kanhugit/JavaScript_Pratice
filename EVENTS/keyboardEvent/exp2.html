@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydown Example (Inline Event)</title>
+</head>
+
+<body>
+
+    <h3>Press any key to see the total count:</h3>
+    <p>Total key presses: <span id="count">0</span></p>
+
+    <!-- Inline event handling for keydown -->
+    <input type="text" onkeydown="countKeys()" placeholder="Press keys here..." />
+    <h3>Type a character to display it below:</h3>
+    <p>Character pressed: <span id="char"></span></p>
+
+
+    <hr>
+    <!-- Inline event handling for keyup -->
+    <h3>Press the "Enter" key to display a message:</h3>
+    <p id="message"></p>
+    <input type="text" onkeyup="checkEnterKey(event)" placeholder="Press Enter here..." />
+
+
+
+
+    <script>
+        let keyCount = 0;
+
+        function countKeys() {
+            keyCount++;
+            document.getElementById('count').textContent = keyCount;
+        }
+
+        function displayChar(event) {
+            document.getElementById('char').textContent = event.key;
+        }
+
+        function checkEnterKey(event) {
+            if (event.key === 'Enter') {
+                document.getElementById('message').textContent = 'You released the Enter key!';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

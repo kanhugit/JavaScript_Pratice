@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>loop pratice question</h1>
+    <script>
+        
+        //
+        for (let i = 1; i <= 1000; i++) {
+    if (i % 2 !== 0) {
+        console.log(i);
+    }
+}
+
+//wap to print the number from 300 t0 500
+
+for (let i = 300; i <= 500; i++) {
+    console.log(i);
+}
+//wap to print the number from 1000 t0 1
+
+for (let i = 1000; i >= 1; i--) {
+    console.log(i);
+}
+//wap to print the value which is divisible by 4  from 200 to 800
+
+for (let i = 200; i <= 800; i++) {
+    if (i % 4 === 0) {
+        console.log(i);
+    }
+}
+
+
+
+//wap to print the each digit  of a given number
+let number = 12345; 
+let count = 0;
+
+if (number === 0) {
+    count = 1; 
+} else {
+
+    let temp = Math.abs(number); 
+    while (temp > 0) {
+        temp = Math.floor(temp / 10);  
+        count++; 
+    }
+}
+
+console.log(`The number of digits in ${number} is: ${count}`);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form id="myForm">
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <!-- <button id="myButton">Click Me</button> -->
+
+
+    <!-- <form id="myForm">
+        <input type="text" id="username" placeholder="Enter your username">
+        <button type="submit">Submit</button>
+    </form> -->
+
+    <!-- <a href="https://www.youtube.com/" id="myLink">youtube</a> -->
+
+    <div id="noContext" style="padding: 20px; background-color: lightblue;">
+        Right-click is disabled on this div
+    </div>
+    <img src="https://cdn.pixabay.com/photo/2016/09/22/13/51/bollywood-1687410_1280.jpg"
+        style="height: 100px; width: 100px;" alt="Draggable Image" id="myImage" draggable="true">
+
+    <script>
+        // const form = document.getElementById("myForm");
+
+        // form.addEventListener("submit", function (event) {
+        //     event.preventDefault(); // Prevents the form from submitting
+        //     console.log("Form submission prevented!");
+        // });
+
+
+        // const button = document.getElementById("myButton");
+        // button.addEventListener("click", function (event) {
+        //     event.stopImmediatePropagation();
+        //     console.log("First listener");
+        // });
+        // button.addEventListener("click", function () {
+        //     console.log("Second listener"); // This won’t run
+        // });
+
+
+        // const form = document.getElementById("myForm");
+        // form.addEventListener("submit", function (event) {
+        //     // event.preventDefault(); // Prevents the form from submitting
+        //     const username = document.getElementById("username").value;
+        //     if (username === "") {
+        //         alert("Username cannot be empty!");
+        //     } else {
+        //         alert("Form validated! Proceed with submission.");
+        //         // Proceed with submission logic if necessary
+        //     }
+        // });
+
+
+        // const link = document.getElementById("myLink");
+
+        // link.addEventListener("click", function (event) {
+        //     event.preventDefault(); // Prevents the link from navigating
+        //     console.log("Link click prevented. Custom action can go here.");
+        // });
+
+        const noContextDiv = document.getElementById("noContext");
+        noContextDiv.addEventListener("contextmenu", function (event) {
+            // event.preventDefault(); // Prevents the default context menu
+            alert("Right-click is disabled on this element.");
+        });
+
+        const image = document.getElementById("myImage");
+        image.addEventListener("dragstart", function (event) {
+            // event.preventDefault(); // Prevents default drag behavior
+            console.log("Drag event prevented. Implement custom drag logic.");
+        });
+
+    </script>
+
+</body>
+
+</html>

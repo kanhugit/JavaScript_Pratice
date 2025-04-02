@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Touch Events Example</title>
+  <style>
+    .touch-box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 200px;
+      margin: 20px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Touch Events Example</h2>
+  
+  <!-- Touch Box for All Touch Events -->
+  <div class="touch-box"
+       ontouchstart="handleTouchStart()"
+       ontouchmove="handleTouchMove()"
+       ontouchend="handleTouchEnd()"
+       ontouchcancel="handleTouchCancel()">
+    Touch Here
+  </div>
+
+  <script>
+    // Touch start event handler
+    function handleTouchStart() {
+      console.log("Touch started!");
+    }
+
+    // Touch move event handler
+    function handleTouchMove() {
+      console.log("Touch is moving!");
+    }
+
+    // Touch end event handler
+    function handleTouchEnd() {
+      console.log("Touch ended!");
+    }
+
+    // Touch cancel event handler
+    function handleTouchCancel() {
+      console.log("Touch cancelled!");
+    }
+  </script>
+
+</body>
+</html>

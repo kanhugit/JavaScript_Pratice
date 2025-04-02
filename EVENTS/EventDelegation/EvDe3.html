@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="shoppingList">
+        <li class="item ">Apple</li>
+        <li class="item ">Banana</li>
+        <li class="item ">Orange</li>
+    </ul>
+    <script>
+        //noramal way 
+
+        // Select all <li> elements with the class "item"
+        const items = document.querySelectorAll("li.item");
+
+        // Add an individual click event listener to each item
+        items.forEach(function (item) {
+            item.addEventListener("click", function () {
+                console.log("You clicked on:", item.textContent);
+            });
+        });
+
+        // using event Delegation 
+        // const shoppingList = document.getElementById("shoppingList");
+
+        // shoppingList.addEventListener("click", function (event) {
+        //     if (event.target.matches("li.item")) {
+        //         console.log("You clicked on a shopping list item:", event.target.textContent);
+        //     }
+        // });
+
+
+    </script>
+</body>
+
+</html>

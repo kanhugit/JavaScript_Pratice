@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gec</title>
+</head>
+<body>
+    <script>
+        var a=10;
+        function outer(){
+            let b=20;
+            console.log(a,b);
+            function inner(){
+                const c=30;
+                console.log(a,b,c);
+
+            }
+            inner();
+        }
+        outer();
+        // console.log(a,b,c);
+    </script>
+</body>
+</html>

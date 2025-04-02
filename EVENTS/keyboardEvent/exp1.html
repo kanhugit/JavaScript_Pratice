@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Event Handling Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Keyboard Event Handling Example</h2>
+  <p>Type something in the input box and watch the events:</p>
+  
+  <!-- Input field with inline event handling for keydown, keypress, and keyup -->
+  <input type="text" id="inputBox" 
+         onkeydown="handleEvent(event, 'keydown')" 
+         onkeypress="handleEvent(event, 'keypress')" 
+         onkeyup="handleEvent(event, 'keyup')" 
+         placeholder="Type here..." />
+
+  <div class="output" id="output">
+    <p id="eventLog">Event log will appear here...</p>
+  </div>
+
+  <script>
+    function handleEvent(event, eventType) {
+      const key = event.key;  // Get the key pressed
+      const code = event.code; // Get the physical key code
+
+      // Display the key, code, and event type
+      document.getElementById('eventLog').innerHTML = `
+        Event: <b>${eventType}</b> | Key: <b>${key}</b> | Code: <b>${code}</b>
+      `;
+
+      // Prevent default action for a specific key (optional for demonstration)
+      if (key === 'a' && eventType === 'keydown') {
+        event.preventDefault();
+        alert('Key "a" is disabled for "keydown" event');
+      }
+    }
+  </script>
+
+</body>
+</html>

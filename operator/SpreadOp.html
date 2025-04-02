@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //spread operator
+        let obj1 = {
+            name: "kanha",
+            id: 101
+        }
+        let person = {
+            ...obj1,
+            address: "panchagutta"
+        }
+        console.log(person);
+
+        // rest parameter
+        function add(a, b, ...c) {
+            let sum = a + b;
+            for (let i = 0; i < c.length; i++) {
+                sum += c[i];
+            }
+            console.log(sum);
+        }
+
+        add(1, 2);          // Output: 3
+        add(1, 2, 3);       // Output: 6
+        add(1, 2, 3, 4);    // Output: 10
+        add(1, 2, 3, 4, 5); // Output: 15
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       // Set items in local storage
+localStorage.setItem("username", "JohnDoe");
+localStorage.setItem("email", "john@example.com");
+
+// Get items
+console.log(localStorage.getItem("username")); // "JohnDoe"
+console.log(localStorage.getItem("email")); // "john@example.com"
+
+// // Check the number of items
+console.log("Number of items in local storage:", localStorage.length); // 2
+
+// Get key name by index
+console.log(localStorage.key(0)); // "username"
+
+// Remove an item
+localStorage.removeItem("username");
+
+// Check the number of items after removing
+console.log("Number of items in local storage after removal:", localStorage.length); // 1
+
+// Clear all items
+localStorage.clear();
+console.log("Number of items after clearing:", localStorage.length); // 0
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // new Promise((resolve) => resolve(1))
+        //     .then(result => {
+        //         console.log(result); // 1
+        //         return result + 1;
+        //     })
+        //     .then(result => {
+        //         console.log(result); // 2
+        //         return result + 1;
+        //     })
+        //     .then(result => console.log(result)); // 3
+
+
+
+
+
+
+
+        // let p = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve(10);
+        //     }, 3 * 100);
+        // });
+
+        // p.then((result) => {
+        //     console.log(result); // 10
+        //     return result * 2;
+        // }).then((result) => {
+        //     console.log(result); // 20
+        //     return result * 3;
+        // }).then((result) => {
+        //     console.log(result); // 60
+        //     return result * 4;
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Callback Hell
+        // function task1(callback) {
+        //     setTimeout(() => {
+        //         console.log("Task 1 completed");
+        //         callback();
+        //     }, 1000);
+        // }
+
+        // function task2(callback) {
+        //     setTimeout(() => {
+        //         console.log("Task 2 completed");
+        //         callback();
+        //     }, 1000);
+        // }
+
+        // task1(() => {
+        //     task2(() => {
+        //         console.log("All tasks completed!");
+        //     });
+        // });
+
+        // Refactor with Promises
+        function task1Promise() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Task 1 completed");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function task2Promise() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Task 2 completed");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        task1Promise()
+        .then(task2Promise)
+        .then(() => console.log("All tasks completed!"));
+
+    </script>
+</body>
+
+</html>

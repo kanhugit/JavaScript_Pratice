@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <div id="touchArea" style="width:200px; height:200px; background-color:lightgray;">
+        Touch Here
+    </div>
+    <script>
+        const touchArea = document.getElementById("touchArea");
+
+        touchArea.addEventListener("touchstart", function () {
+            console.log("Touch started!");
+        });
+
+        touchArea.addEventListener("touchmove", function () {
+            console.log("Touch moved!");
+        });
+
+        touchArea.addEventListener("touchend", function () {
+            console.log("Touch ended!");
+        });
+    </script>
+
+</body>
+
+</html>

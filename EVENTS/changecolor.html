@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="5" cellspacing="51px">
+        <tr id="tr1">
+            <td id="td1">red</td>
+            <td id="td2">green</td>
+            <td id="td3">blue</td>
+        </tr>
+    </table>
+
+    <script>
+        // let td1=document.getElementById('td1')
+        // td1.addEventListener('click',(e)=>{
+        //     if(td1.style.backgroundColor='white'){
+        //         td1.style.backgroundColor='red'
+        //     }else{
+        //         td1.style.backgroundColor='white'
+        //     }
+        // })
+        // let td2=document.getElementById('td2')
+        // td2.addEventListener('click',(e)=>{
+        //     if(td2.style.backgroundColor='white'){
+        //         td2.style.backgroundColor='blue'
+        //     }else{
+        //         td2.style.backgroundColor='white'
+        //     }
+        // });
+        // let td3=document.getElementById('td3')
+        // td3.addEventListener('click',(e)=>{
+        //     if(td3.style.backgroundColor='white'){
+        //         td3.style.backgroundColor='green'
+        //     }else{
+        //         td3.style.backgroundColor='white'
+        //     }
+        // });
+
+        //event delegation
+        let tr1=document.getElementById("tr1");
+        tr1.addEventListener("click",(e)=>{
+            // console.log(e.target);
+            // if(e.target.innerText=='red'){
+            //     e.target.style.backgroundColor='red'
+            // }else if(e.target.innerText=='blue'){
+            //     e.target.style.backgroundColor='blue'
+
+            // }else if(e.target.innerText=='green'){
+            //     e.target.style.backgroundColor='green'
+
+            // }
+            e.target.style.backgroundColor=e.target.innerText
+        })
+    </script>
+</body>
+
+</html>

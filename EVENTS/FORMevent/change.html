@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Event Example</title>
+</head>
+<body>
+
+  <h3>Change Event Example</h3>
+  <label for="colors">Choose a color:</label>
+  <select id="colors" name="colors" onchange="displayColorChoice()">
+    <option value="Red">Red</option>
+    <option value="Green">Green</option>
+    <option value="Blue">Blue</option>
+  </select>
+  <p id="colorMessage"></p>
+
+  <script>
+    function displayColorChoice() {
+      const color = document.getElementById('colors').value;
+      document.getElementById('colorMessage').textContent = 'You selected: ' + color;
+    }
+  </script>
+
+</body>
+</html>

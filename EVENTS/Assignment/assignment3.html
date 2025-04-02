@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="cards_container">
+
+    </div>
+
+
+    <script>
+        let cards_data = [
+            {
+                img: "https://cdn.pixabay.com/photo/2023/08/18/15/02/dog-8198719_1280.jpg",
+                name: "DOG",
+                description: "DOG IS VERY FAITHFUL PET "
+            },
+            {
+                img: "https://s.yimg.com/fz/api/res/1.2/b5pcyMMZiVSsyzOH52pNwQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI2MDtxPTgwO3c9MzMy/https://s.yimg.com/zb/imgv1/c8283af8-a93e-351b-8b0c-5fb19d04dda6/t_500x300",
+                name: "DUCK",
+                description: "DOG IS VERY FAITHFUL PET "
+            },
+            {
+                img: "https://tse1.mm.bing.net/th?id=OIP.A7KZD0bE4Glw2eeUesBJlAHaEo&pid=Api",
+                name: "BEAR",
+                description: "DOG IS VERY FAITHFUL PET "
+            },
+        ]
+        let cards_container = document.getElementById("cards_container");
+
+        // cards_data.map((Object) => {
+            // cards_container.innerHTML += `
+            //             <div>
+            //                 <img src=${Object.img} alt="img" height="100" width="100">
+            //                 <h2> ${Object.name}</h2>
+            //                 <p> ${Object.description}</p>
+            //                 </div>
+                        
+            // `
+
+
+            //destructuring :array destructuring and object desctructuring
+            cards_data.map(({img,name,description}) => {
+            //    let {img,name,description}=Object
+            cards_container.innerHTML += `
+                        <div>
+                            <img src=${img} alt="img" height="100" width="100">
+                            <h2> ${name}</h2>
+                            <p> ${description}</p>
+                            </div>
+                        
+            `
+
+                            let fruits=["apple","grapes","bannaa"];
+                            console.log(fruits[0]);
+                            console.log(fruits[1]);
+
+                            //let apple=fruits[0]
+                            //let apple=fruits[1]
+
+            
+        })
+    </script>
+</body>
+
+</html>

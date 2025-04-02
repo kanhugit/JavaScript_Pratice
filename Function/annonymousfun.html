@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annonymous Function</title>
+</head>
+
+<body>
+    <script>
+        //function with parameters and  with return type 
+        console.log("secenario 1");
+
+        let fun1 = function (a, b) {
+            let sum = a + b;
+            return sum;
+        }
+        let x = fun1(10, 20)
+        console.log(x);
+        console.log(fun1(1, 3));
+
+        //function with parameters and without return type
+
+        console.log("secenario 2");
+
+        let fullname = function (firstname, lastname) {
+            if (typeof firstname === "string" && typeof lastname === "string") {
+                console.log("fullname is " + (firstname + lastname));
+            } else {
+                console.log("incorrect data ");
+            }
+        }
+        fullname("kanhu ", "swati");
+        fullname(10, 20);
+
+
+
+        //=======================
+        let fun5 = function (a, b) {
+            console.log("the sum is " + (a + b));
+        };
+
+        // Calling the function
+        fun5(2, 3);
+
+
+        //function without parameters and with return types
+        console.log("secenario 3");
+
+        let fun3 = function () {
+            console.log("function 3 executed ");
+            return 100;
+        }
+
+        console.log(fun3());
+
+        //   function without parameters and without return types
+        console.log("secenario 4");
+
+        let fun4 = function () {
+            console.log("O...........helooooooooooooooooo");
+        }
+        console.log(fun4())
+       
+
+
+
+
+
+    </script>
+</body>
+
+</html>

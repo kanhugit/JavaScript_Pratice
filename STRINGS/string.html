@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "Jspiders";
+        console.log(str.length); //8
+        for (let i = 0; i < str.length; i++) {
+            console.log(str[i]);
+        }
+
+        let uc1 = str.toUpperCase();
+        console.log(uc1);
+        console.log(str);
+
+        let lc2 = str.toLowerCase();
+        console.log(lc2);
+        console.log(str);
+
+        console.log(str.startsWith("Jsp"));
+        console.log(str.startsWith("jsp"));
+
+        console.log(str.endsWith("ers"));
+        console.log(str.endsWith("s"));
+        console.log(str.endsWith("Y"));
+
+        console.log(str.charAt(0));
+        console.log(str.charAt(8));
+        console.log(str.charAt(5));
+
+        console.log(str.charCodeAt(0));
+        console.log(str.charCodeAt(5));
+
+        console.log(str.slice(0, 3));
+        console.log(str.slice(1, 7));
+        console.log(str.slice(-7, -1));
+        console.log(str.slice(-2, 1));
+        console.log(str.slice(4, -3)); //jsp
+        console.log(str.slice(1, 7));
+
+        console.log(str.substring(-7, 1));
+        console.log(str.substring(-7, -1));
+
+        let str1 = "Hello";
+        let str2 = "World";
+        console.log(str1.concat(str2)); // Output: "Hello, World"
+        console.log(str1 + ", " + str2); // Output: "Hello, World"
+
+        let text = "JavaScript is versatile.";
+        console.log(text.indexOf("is")); // Output: 11
+        console.log(text.indexOf("i")); // Output: 7
+
+        let sentence = "Learning JavaScript";
+        console.log(sentence.includes("JavaScript")); // Output: true
+        //===================================================
+        let example = "JavaScript is amazing.";
+        console.log(example.slice(5, 10)); // Output: "JavaScript"
+        console.log(example.substring(5, 10)); // Output: "JavaScript"
+        console.log(example.substr(1, 2)); // Output: "is"
+        console.log(example);
+        //==================================================
+        let story = "The cat sat on the mat.";
+        console.log(story.replace("cat", "dog")); // Output: "The dog sat on the mat."
+        console.log(story.replaceAll("at", "et")); // Output: "The cet set on the met."
+        // console.log(story);
+
+        //==============================================
+        let colors = "red,green,blue";
+        console.log(colors.split(",")); // Output: ["red", "green", "blue"]
+
+        //==================================
+        let whitespaceString = "   Hello,World!   ";
+        // console.log(whitespaceString.trim()); // Output: "Hello, World!"
+        // console.log(whitespaceString.trimStart());
+        console.log(whitespaceString.trimEnd());
+
+        let numString = "5";
+        console.log(numString.padStart(3, "0")); // Output: "05"
+        console.log(numString.padEnd(13, "0")); // Output: "50"
+        console.log(numString.padStart(10, "five"));
+
+        let number =42;
+        console.log(String(number)); // Output: "42"
+
+
+
+
+console.log("ABC".charCodeAt(0)); // Output: 65 (Unicode for "A")
+console.log("ABC".charCodeAt(1)); // Output: 66 (Unicode for "B")
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

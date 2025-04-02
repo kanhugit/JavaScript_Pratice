@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">get an alert</button>
+    <button id="btn2">print name</button>
+    <button id="btn3">add 2 number</button>
+    <button id="btn4">logout</button>
+
+    <script>
+        let btn1=document.getElementById('btn1');
+        btn1.addEventListener("click",()=>{
+            alert("warning......")
+        })
+        let btn2=document.getElementById('btn2');
+        btn2.addEventListener("click",()=>{
+            let x=prompt("Enter your name")
+          console.log(x);
+        })
+        let btn3=document.getElementById("btn3");
+        btn3.addEventListener("click",()=>{
+            // let num1=prompt("enter num1")
+            // let num2=prompt("enter num2")
+            //console.log(num1+num2);//concatinate happens beacuse of prompt method teruns always string
+            // let newNum1=Number(num1)
+            // let newNum2=Number(num2)
+            // console.log(newNum1+newNum2);//addition happens
+
+            let num1=Number.prompt("Enter num1");
+            let num2=Number.prompt("Enter num2");
+            console.log(num1+num2);
+        })
+
+        let btn4=document.getElementById('btn4');
+        btn4.addEventListener("click",()=>{
+            let x=confirm("are u sure u want to logout")
+          console.log(x);
+          if(x){
+            window.close()
+          }else{
+            alert("continue..")
+          }
+        })
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="outerDiv" style="border: 2px solid red; width: 300px;height: 300px;">OuterDiv
+        <div id="innerDiv" style="border: 2px solid black; width: 200px;height: 200px;">innerDiv
+            <button id="myButton">Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        // document.getElementById("outerDiv").addEventListener(
+        //     "click",
+        //     function () {
+        //         console.log("Outer div clicked!");
+        //     },
+        //     true // Enable capturing phase
+        // );
+
+        // document.getElementById("innerDiv").addEventListener(
+        //     "click",
+        //     function () {
+        //         console.log("Inner div clicked!");
+        //     },
+        //     true // Enable capturing phase
+        // );
+
+        // document.getElementById("myButton").addEventListener(
+        //     "click",
+        //     function () {
+        //         console.log("Button clicked!");
+        //     },
+        //     true // Enable capturing phase
+        // );
+
+        let outerDiv=document.getElementById("outerDiv");
+        outerDiv.addEventListener("click",()=>{
+            console.log("outer div was clicked");
+        },true)
+
+      let  innerDiv=document.getElementById("innerDiv");
+        innerDiv.addEventListener("click",()=>{
+            console.log("Inner div was clicked");
+        },true)
+        
+      let  mybtn=document.getElementById("myButton");
+            mybtn.addEventListener("click",()=>{
+                console.log("Button clicked");
+            },true)
+    </script>
+
+</body>
+
+</html>

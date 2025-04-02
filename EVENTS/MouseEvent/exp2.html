@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Mouse Events Example</title>
+</head>
+
+<body>
+
+    <h2>Mouse Events Example</h2>
+    <p id="message">Interact with the box below to see different mouse events.</p>
+
+    <!-- The box to interact with -->
+    <div id="mouseBox" onclick="showMessage('Mouse Clicked')" ondblclick="showMessage('Mouse Double Clicked')"
+        onmousedown="showMessage('Mouse Button Pressed')" onmouseup="showMessage('Mouse Button Released')"
+        onmouseenter="showMessage('Mouse Entered')" onmouseleave="showMessage('Mouse Left')"
+        onmousemove="showMessage('Mouse Moving Inside')" onmouseover="showMessage('Mouse Hovered Over')"
+        onmouseout="showMessage('Mouse Moved Out')"
+        style="width: 150px; height: 150px; background-color: lightblue; text-align: center; line-height: 150px; border: 1px solid black;">
+        Mouse Box
+    </div>
+
+    <script>
+        // Function to display a message
+        function showMessage(eventType) {
+            document.getElementById("message").textContent = "Event: " + eventType;
+        }
+    </script>
+
+</body>
+
+</html>

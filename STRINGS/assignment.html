@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+        }
+
+        console.log(reverseString("example"));
+
+        //orrrrrrrrrrrrrrrrrrr
+        function reverseString(str) {
+            let reversed = '';
+            for (let i = str.length - 1; i >= 0; i--) {
+                reversed += str[i];
+            }
+            return reversed;
+        }
+
+        console.log(reverseString("example"));
+        //=================================
+
+
+        function countWords(str) {
+            return str.trim().split(/\s+/).length;
+        }
+
+        console.log(countWords("This is a sample sentence"));
+
+        //ORRRRRRR
+        function countWords(str) {
+            let wordCount = 0;
+            let inWord = false;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === ' ') {
+                    inWord = false;
+                } else if (!inWord) {
+                    inWord = true;
+                    wordCount++;
+                }
+            }
+            return wordCount;
+        }
+
+        console.log(countWords("This is a sample sentence"));
+
+        //=================================
+
+        function countCharacters(str) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] !== ' ') {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        console.log(countCharacters("This is a sample sentence"));
+
+        //====================================
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function countPrimes(arr) {
+            let primeCount = 0;
+            for (let num of arr) {
+                if (isPrime(num)) {
+                    primeCount++;
+                }
+            }
+            return primeCount;
+        }
+
+        console.log(countPrimes([2, 3, 4, 5, 6, 7, 8, 9]));
+
+        //==============================================
+        function stringToArray(str) {
+            return str.split('');
+        }
+
+        console.log(stringToArray("hello"));
+
+
+        //==============================================
+        function arrayToString(arr) {
+            return arr.join('');
+        }
+
+        console.log(arrayToString(['h', 'e', 'l', 'l', 'o']));
+        //==========================================
+
+        function sortArray(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[i] > arr[j]) {
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        console.log(sortArray([5, 3, 8, 1, 2]));
+        //==================================================
+
+        function printEvenIndexElements(arr) {
+            for (let i = 0; i < arr.length; i += 2) {
+                console.log(arr[i]);
+            }
+        }
+
+        printEvenIndexElements([1, 2, 3, 4, 5, 6, 7, 8]);
+        //=============================================
+        function characterAtIndex(str, index) {
+            return str[index];
+        }
+
+        console.log(characterAtIndex("example", 3));
+        //==========================================
+        function reverseArray(arr) {
+            let left = 0;
+            let right = arr.length - 1;
+            while (left < right) {
+                let temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left++;
+                right--;
+            }
+            return arr;
+        }
+
+        console.log(reverseArray([1, 2, 3, 4, 5]));
+
+        //=========================================
+        function createObject() {
+            let obj = { key: "value" };
+            return obj;
+        }
+
+        console.log(createObject());
+        //==============================================
+
+        function printKeys(obj) {
+            for (let key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    console.log(key);
+                }
+            }
+        }
+
+        printKeys({ key1: "value1", key2: "value2" });
+        //=========================================================
+        function createArrayOfObjects() {
+            let arr = [
+                { name: "Alice", age: 25 },
+                { name: "Bob", age: 30 },
+                { name: "Charlie", age: 35 }
+            ];
+            return arr;
+        }
+
+        console.log(createArrayOfObjects());
+
+        //========================================
+        function printStructure(arr) {
+            arr.forEach((element, index) => {
+                console.log(`Element at index ${index}:`, element);
+            });
+        }
+
+        printStructure([{ name: "Alice" }, { name: "Bob" }, { name: "Charlie" }]);
+
+        //==================================================================
+        function extractNumbers(arr) {
+            return arr.filter(item => typeof item === 'number');
+        }
+
+        console.log(extractNumbers([1, "a", 2, true, 3, "b", 4]));
+
+        //==============================================================
+
+
+
+
+    </script>
+</body>
+
+</html>
