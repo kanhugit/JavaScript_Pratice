@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1" style="display: flex;">
+
+    </div>
+
+    <script>
+        let div1 = document.getElementById("div1");
+        let x = fetch("https://api.freeapi.app/api/v1/public/randomproducts");
+        console.log(x);   //promise   =>fulfilled
+
+        x.then((response) => {
+            console.log(response);
+            // console.log(response.json);
+            return response.json()
+        }).then((data) => {
+            console.log(data);//20 object
+            // document.write(data[0].description)
+            data.map((obj) => {
+                div1.innerHTML += `<div style="border:2px solid red;width:300px;padding:10px;">
+            <img src=${obj.image} height="200" width=""200>
+            <h2>${obj.title}</h2>
+            <p>${obj.description}</p>
+            <p>$-${obj.price}</p>
+
+        </div>
+        `
+            })
+        })
+    </script>
+</body>
+
+</html>

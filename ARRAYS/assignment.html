@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //WAP to print all the element from given array
+        arr = [1, 2, 3, 'four', 'five', 'six']
+        for (let i = 0; i < arr.length; i++) {       //i<=arr.length at last u willget undefined
+            console.log(arr[i]);
+        }
+
+        //wap to double all the element in given array
+        arr1 = [1, 2, 3, 4, 5, 6]
+        for (let i = 0; i < arr1.length; i++) {
+            arr1[i] = arr1[i] + arr1[i]
+        }
+        console.log(arr1);
+
+        //wap to print array elements along with its index position
+        for (let i = 0; i < arr.length; i++) {
+            console.log(`this arr a element ${arr[i]} is at index position of ${i}`);
+        }
+
+        //wap to print the number of elements in the given array
+        c = 0
+        for (let i = 0; i < arr.length; i++) {
+            c += 1
+        }
+        console.log(c);
+
+        //wap to print the count of odd numbers from given array
+        arr2 = [1, 2, 3, 4, 5, 6]
+        c1 = 0
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr2[i] % 2 != 0) {
+                c1 += 1
+            }
+        }
+        console.log(c1);
+
+        //wap to print the count of even numbers from given array
+        arr2 = [1, 2, 3, 4, 5, 6]
+        c1 = 0
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr2[i] % 2 == 0) {
+                c1 += 1
+            }
+        }
+        console.log(`total number of evevn number in an array ${[arr2]} is ${c1}`);
+
+        //wap to print new array with all even elements from given array
+        // [1,2,3,4,5,6,7] => [2,4,6]
+        arr3 = [1, 2, 3, 4, 5, 6, 7]
+        res = []
+        for (let i = 0; i < arr3.length; i++) {
+            if (arr3[i] % 2 == 0) {
+                res.push(arr3[i])
+            }
+        }
+        console.log(res);
+
+        //wap to print new array with all odd elements from given array
+        // [1,2,3,4,5,6,7] => [1,3,5,7]
+        arr3 = [1, 2, 3, 4, 5, 6, 7]
+        res = []
+        for (let i = 0; i < arr3.length; i++) {
+            if (arr3[i] % 2 != 0) {
+                res.push(arr3[i])
+            }
+        }
+        console.log(res);
+
+        //wap to print new array with all odd elements and new array with even element in given array
+        // [1,2,3,4,5,6,7] => even elements are [2,4,6,8]
+        //                    odd elements are  [1,3,5,7]
+        arr4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        even = []
+        odd = []
+        for (let i = 0; i < arr4.length; i++) {
+            if (arr4[i] % 2 == 0) {
+                even.push(arr4[i])
+            }
+            else {
+                odd.push(arr4[i])
+            }
+        }
+        console.log(`even elements are ${even}`);
+        console.log(`odd elements are ${odd}`);
+
+        //wap to print double of element present in given index position
+        //   [1,2,3,4]     =>   1(index position) =>4
+        //                 =>   2(index position) =>6
+        arr5 = [1, 2, 3, 4, 5]
+        function double(ele) {
+            console.log(`${ele}(index position => ${arr5[ele] + arr5[ele]}`);
+        }
+        double(2)
+    </script>
+
+</body>
+
+</html>

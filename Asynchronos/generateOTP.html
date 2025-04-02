@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">generateOTP</button>
+</body>
+<script>
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", generateOTP);
+    function generateOTP(){
+        let otp=Math.floor(Math.random()*10000);
+
+        if(otp>999 && otp<10000){
+            console.log(otp);
+        }else{
+            generateOTP();
+        }
+    }
+
+
+
+
+// console.log(Math.max(10,20,30,40,50));
+// console.log(Math.min(10,20,30,40,50));
+// console.log(Math.pow(2,3));
+// console.log(Math.floor(231.123)); //roundup least
+// console.log(Math.floor(4.8));
+// console.log(Math.floor(4.3));
+// console.log(Math.ceil(4.8)); //roundup highest
+// console.log(Math.ceil(4.4));
+// console.log(Math.trunc(4.66)); //avoids  decimal
+// console.log(Math.round(1.8));
+// console.log(Math.round(8.8)); //roundup nearest
+// console.log(Math.random());  //any random number
+
+//date constructor function
+
+
+
+
+
+
+
+
+</script>
+
+</html>

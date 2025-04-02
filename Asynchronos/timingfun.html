@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+
+    <script>
+
+
+        let start=document.getElementById("start");
+        let stop=document.getElementById("stop");
+        let demo;
+        start.addEventListener("click",()=>{
+            demo=setInterval(()=>{
+                console.log("kanha");
+            },2000)
+        })
+        stop.addEventListener("click",()=>{
+            clearInterval(demo)
+        })
+
+        // let stop = document.getElementById("start");
+        // start.addEventListener("click",() => {
+        //     let x = setTimeout(() => {
+        //         console.log("helllo");
+        //     }, 2000);
+        // })
+        //timing function  
+        //setTimeOut()
+        //     let x = setTimeout(() => {
+        //         console.log("helllo");
+        //     }, 2000);
+        // console.log("world");
+
+        //setInterval()
+        // let y = setInterval(() => {
+        //     console.log("kanha");
+        // }, 1000);
+        // clearTimeout(x)
+        // clearInterval(y)
+
+        // setTimeout(() => {
+        //     window.open("https://www.google.com", null, 'height=400,width=400');
+
+        // }, 3000)
+
+    </script>
+</body>
+
+</html>

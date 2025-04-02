@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>call() ,apply(), and bind() meethods in js</h1>
+    <p>1>call methods is used to access the previous object keys and values.it allows extra arguments </p>
+    <p>2>apply methods is used to access the previous object keys and values.it allows extra arguments in the arrays </p>
+    <p>3>bind methods is used to access the previous object keys and values.it allo </p>
+
+
+    
+    <script>
+        console.log(this);
+        
+        // let person={
+        //     name:"kanha",
+        //     id:101,
+        //     sal:"1 cr",
+        //     address:()=>{
+        //         console.log(this.name+"address is Bhadrak");
+        //     }
+        // }
+        // person.address();
+
+
+        // let person={
+        //     name:"kanha",
+        //     id:101,
+        //     sal:"1 cr",
+        //     address:{
+        //         area:"Odisha",
+        //         pincode: function(){
+        //             console.log(this.area+" pincode is 756132");
+        //         }
+        //     }
+        // }
+        // person.address.pincode();
+
+
+        let person1={
+            name:"pavan",
+            id:102
+        }
+
+        let person={
+            name:"kanha",
+            id:101,
+            sal:"1cr",
+            address:function(pincode,landmark){
+                console.log(this.name+"address is gutta and pincode is "+pincode+"landmark is "+landmark);
+            }
+        }
+
+        person.address.call(person1,12345,"jspider")
+        person.address.apply(person1,[124445,"qspider"])
+
+        let x=person.address.bind(person1)
+        console.log(x);
+
+
+       
+    </script>
+</body>
+</html>
